@@ -1,5 +1,37 @@
-<div>
-  "- Chứa thông tin buổi học, lớp học - Chia làm 2 phần: phần bên trái hiển thị text box dùng
-  để bắt sự kiện text change khi scan barcode, phần bên phải hiển thị tên học viên, hình ảnh,
-  thời gian điểm danh, danh sách 3 lần điểm danh gần nhất của lớp học."
+<h2>Quản lý điểm danh</h2>
+<div class="container">
+  <div class="row top-row">
+    <div class="box barcode-box">
+      <div class="barcode">Barcode sau khi scan</div>
+    </div>
+    <div class="box info-box">
+      <p><strong>Lớp:</strong> Tư tưởng Hồ Chí Minh khóa 20</p>
+      <p><strong>Buổi:</strong> 1</p>
+    </div>
+  </div>
+
+  <div class="row bottom-row">
+    <div class="box history-box">
+      <h3>Lịch sử điểm danh</h3>
+      <div class="table-wrapper">
+        <table class="fl-table">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Lớp</th>
+              <th>Thời gian</th>
+            </tr>
+          </thead>
+          <tbody class="attendenceTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="box user-box">
+      <img src="https://placehold.net/avatar.svg" alt="Ảnh học viên" class="avatar" />
+      <p class="username">Đỗ Nam Trung</p>
+      <p class="phone">SDT: ......</p>
+      <p class="success-msg">Điểm danh thành công!<br />10/8/2025 09:30:00</p>
+    </div>
+  </div>
 </div>
