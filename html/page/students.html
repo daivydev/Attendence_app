@@ -1,69 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<body>
 
-	<!-- Modal: Lớp học của học viên -->
-	<div class="modal fade" id="popupLopHoc" tabindex="-1" aria-labelledby="popupLopHocLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="popupLopHocLabel">Lớp học đã tham gia</h5>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
-			</div>
-			<div class="modal-body">
-				<ul class="list-group" id="studentClassesList"></ul>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn-next-secondary" data-bs-dismiss="modal">Đóng</button>
-			</div>
-			</div>
+
+<!-- Modal: Lớp học của học viên -->
+<div class="modal fade" id="popupLopHoc" tabindex="-1" aria-labelledby="popupLopHocLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+		<div class="modal-header">
+			<h5 class="modal-title" id="popupLopHocLabel">Lớp học đã tham gia</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+		</div>
+		<div class="modal-body">
+			<ul class="list-group" id="studentClassesList"></ul>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn-next-secondary" data-bs-dismiss="modal">Đóng</button>
+		</div>
 		</div>
 	</div>
+</div>
 
+<div>
+<div class="d-flex justify-content-between align-items-start mb-3">
 	<div>
-	<div class="d-flex justify-content-between align-items-start mb-3">
-		<div>
-		<h2 class="table-title">Quản lý học viên</h2>
-		<div class="d-flex search-row">
-			<input id="kw" class="form-control form-control-sm" placeholder="Tìm theo tên hoặc SĐT..."/>
-			<button class="btn-next-secondary btn-sm" id="btnSearch">Tìm</button>
-		</div>
-		</div>
-		<div class="d-flex align-items-center gap-2">
-		<div class="form-text">Sắp xếp:</div>
-		<select id="sortBy" class="form-select form-select-sm" style="width:auto">
-			<option value="name">Tên (A→Z)</option>
-			<option value="name_desc">Tên (Z→A)</option>
-			<option value="dob">Ngày sinh (lớn→nhỏ)</option>
-			<option value="dob_desc">Ngày sinh (nhỏ→lớn)</option>
-		</select>
-		</div>
+	<h2 class="table-title">Quản lý học viên</h2>
+	<div class="d-flex search-row">
+		<input id="kw" class="form-control form-control-sm" placeholder="Tìm theo tên hoặc SĐT..."/>
+		<button class="btn-next-secondary btn-sm" id="btnSearch">Tìm</button>
 	</div>
+	</div>
+	<div class="d-flex align-items-center gap-2">
+	<div class="form-text">Sắp xếp:</div>
+	<select id="sortBy" class="form-select form-select-sm" style="width:auto">
+		<option value="name">Tên (A→Z)</option>
+		<option value="name_desc">Tên (Z→A)</option>
+		<option value="dob">Ngày sinh (lớn→nhỏ)</option>
+		<option value="dob_desc">Ngày sinh (nhỏ→lớn)</option>
+	</select>
+	</div>
+</div>
 
-	<div class="table-wrapper">
-		<table class="fl-table">
-		<thead>
-			<tr>
-			<th>STT</th>
-			<th>Họ</th>
-			<th>Tên</th>
-			<th class="sortable" id="thDob">Ngày sinh <span class="dir" id="dobDir"></span></th>
-			<th>SĐT</th>
-			<th>Email</th>
-			<th>Lớp đã tham gia</th>
-			<th>Liên kết</th>
-			</tr>
-		</thead>
-		<tbody class="studentsTableBody"></tbody>
-		</table>
-	</div>
-	</div>
+<div class="table-wrapper">
+	<table class="fl-table">
+	<thead>
+		<tr>
+		<th>STT</th>
+		<th>Họ</th>
+		<th>Tên</th>
+		<th class="sortable" id="thDob">Ngày sinh <span class="dir" id="dobDir"></span></th>
+		<th>SĐT</th>
+		<th>Email</th>
+		<th>Lớp đã tham gia</th>
+		<th>Liên kết</th>
+		</tr>
+	</thead>
+	<tbody class="studentsTableBody"></tbody>
+	</table>
+</div>
+</div>
 
-	<script src="/js/students.js"></script>
-</body>
-</html>
+<script src="/js/students.js"></script>
